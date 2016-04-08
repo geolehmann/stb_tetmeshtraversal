@@ -10,7 +10,7 @@ Single-header mesh traversal library using tetgen.
     The library is particularly useful for applications using tetrahedral  meshes for rendering   
     (Lagae & Dutré, 2008) or seismic processing.    
       
-      References:
+      **References:**
         
       Hang Si (2015). "TetGen, a Delaunay-Based Quality Tetrahedral Mesh Generator". ACM Trans. on Mathematical Software. 41 (2),   
       Article 11 (February 2015), 36 pages.  
