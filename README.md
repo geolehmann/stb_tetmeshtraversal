@@ -9,11 +9,14 @@ The library is particularly useful for applications using tetrahedral  meshes fo
 
 Usage:
 
-- This library only works with the beta version of tetgen 1.5.1-beta1 (in previous versions no tetrahedra-face realtions were stored)
-- When generating the mesh with Tetgen, ensure the switches -n -nn -f -z are used.
-- Use the functions provided in the class _tetrahedramesh_ to load the single tetgen files. Load order should be ele->neigh->node->face->t2f->edge.
-- At the beginning, the tetrahedron containing the starting point has to be located with the function _GetTetrahedraFromPoint_. This has to be done only once. If the position changes later on, adjacency information of the tetrahedra can be exploited to track the movement of the starting point. 
-- Mesh traversal is done with the function _traverse_ray_, which takes the mesh, ray origin/direction and starting tetrahedron as input. The _rayhit_ structure stores the intersected face and tetrahedra. 
+- This library only works with the beta version of Tetgen: 1.5.1-beta1 (in previous versions no tetrahedra-face relations as .t2f files were stored)
+- When generating the mesh with Tetgen, ensure the switches -n -nn -f -z are used. A typical example might be: 
+
+tetgen -pq1.4 -n -nn -f -z cornellbox.stl 
+
+- Use the loader functions provided in the class _tetrahedramesh_ to load the single tetgen files. Load order should be ele->neigh->node->face->t2f->edge.
+- At the beginning, the tetrahedron containing the starting point has to be located with the function _GetTetrahedraFromPoint_. This has to be done only once. If the position changes later on, adjacency information of the tetrahedra can be exploited to keep track the movement of the starting point. 
+- Mesh traversal is done with the function _traverse_ray_, which takes the mesh, ray origin/direction and index of the starting tetrahedron as input. The _rayhit_ structure stores the indices of the intersected face and tetrahedron. 
 
 For a working implementation of this library, have a look at: https://github.com/clehmann-geo/tetra_mesh
       
