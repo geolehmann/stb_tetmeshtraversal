@@ -15,7 +15,7 @@ Usage:
 - At the beginning, the tetrahedron containing the starting point has to be located with the function _GetTetrahedraFromPoint_. This has to be done only once. If the position changes later on, adjacency information of the tetrahedra can be exploited to track the movement of the starting point. 
 - Mesh traversal is done with the function _traverse_ray_, which takes the mesh, ray origin/direction and starting tetrahedron as input. The _rayhit_ structure stores the intersected face and tetrahedra. 
 
-For a working implementation of the routines in this library, have a look at: https://github.com/clehmann-geo/tetra_mesh
+For a working implementation of this library, have a look at: https://github.com/clehmann-geo/tetra_mesh
       
 **References:**
         
