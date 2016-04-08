@@ -13,7 +13,7 @@ Usage:
 - When generating the mesh with Tetgen, ensure the switches -n -nn -f -z are used.
 - Use the functions provided in the class _tetrahedramesh_ to load the single tetgen files. Load order should be ele->neigh->node->face->t2f->edge.
 - At the beginning, the tetrahedron containing the starting point has to be located with the function _GetTetrahedraFromPoint_. This has to be done only once. If the position changes later on, adjacency information of the tetrahedra can be exploited to track the movement of the starting point. 
-- Mesh traversal is done with the function _traverseray_, which takes the mesh, ray origin/direction and starting tetrahedron as input. The _rayhit_ structure stores the intersected face and tetrahedra. 
+- Mesh traversal is done with the function _traverse_ray_, which takes the mesh, ray origin/direction and starting tetrahedron as input. The _rayhit_ structure stores the intersected face and tetrahedra. 
       
 **References:**
         
