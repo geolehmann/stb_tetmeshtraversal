@@ -18,7 +18,24 @@ tetgen -pq1.4 -n -nn -f -z cornellbox.stl
 - At the beginning, the tetrahedron containing the starting point has to be located with the function _GetTetrahedraFromPoint_. This has to be done only once. If the position changes later on, adjacency information of the tetrahedra can be exploited to keep track the movement of the starting point. 
 - Mesh traversal is done with the function _traverse_ray_, which takes the mesh, ray origin/direction and index of the starting tetrahedron as input. The _rayhit_ structure stores the indices of the intersected face and tetrahedron. 
 
-For a working implementation of this library, have a look at: https://github.com/clehmann-geo/tetra_mesh
+Example code:
+	
+	tetrahedra_mesh tetmesh;
+	tetmesh.load_tet_ele("cornell_spheres.1.ele");
+	tetmesh.load_tet_neigh("cornell_spheres.1.neigh");
+	tetmesh.load_tet_node("cornell_spheres.1.node");
+	tetmesh.load_tet_face("cornell_spheres.1.face");
+	tetmesh.load_tet_t2f("cornell_spheres.1.t2f");
+    
+    // get starting tetrahedron
+    float4 start_tet = GetTetrahedraFromPoint(tetmesh, camera_position);
+    // stores the hit information
+    rayhit hitpoint;
+  	// ray traversal
+    traverse_ray(tetmesh, camera_position, camera_direction, 						 	start_tet,hitpoint);
+    
+
+For a full working implementation of this library, have a look at: https://github.com/clehmann-geo/tetra_mesh
       
 **References:**
         
