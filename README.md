@@ -32,7 +32,7 @@ Example code:
     // stores the hit information
     rayhit hitpoint;
   	// ray traversal
-    traverse_ray(tetmesh, camera_position, camera_direction, 						 	start_tet,hitpoint);
+    traverse_ray(tetmesh, camera_position, camera_direction, start_tet,hitpoint);
     
 
 For a full working implementation of this library, have a look at: https://github.com/clehmann-geo/tetra_mesh
