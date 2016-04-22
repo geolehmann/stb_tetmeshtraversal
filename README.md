@@ -42,3 +42,6 @@ For a full working implementation of this library, have a look at: https://githu
 Hang Si (2015). TetGen, a Delaunay-Based Quality Tetrahedral Mesh Generator. _ACM Trans. on Mathematical Software. 41 (2), Article 11 (February 2015), 36 pages._
         
 Lagae, A. and Dutré, P. (2008). Accelerating Ray Tracing using Constrained Tetrahedralizations. _Computer Graphics Forum, 27: 1303–1312._
+
+Sanzenbacher, S. (2010) Darstellung von Kaustiken und Lichtstreuung in Interaktiven Anwendungen. _Unpublished diploma thesis, Institut für Visualisierung und Interaktive Systeme, University Stuttgart._ 
+
